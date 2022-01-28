@@ -9,7 +9,7 @@
   --yellow: hsla(51, 98%, 65%, 1);
   --darkBlue: hsla(214, 100%, 15%, 1);
   --grey: hsla(0, 0%, 75%, 1);
-  --lightGrey: hsla(210, 18%, 98%, 1);
+  --lightGrey: hsla(210, 18%, 92%, 1);
 
   /* Define color intentions */
   --background: var(--lightGrey);
@@ -35,10 +35,24 @@ body {
   font-family: var(--body-font);
   font-weight: 400;
   line-height: 1.75;
+  margin-left: 20px;
 }
 
 p {
   margin-bottom: 1rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a{
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: solid 2px var(--green);
+}
+
+p a:hover,
+blockquote a:hover {
+  border-bottom: solid 3px var(--green);
 }
 
 h1, h2, h3, h4, h5 {
@@ -61,6 +75,19 @@ h4 {font-size: var(--h4);}
 
 h5 {
   font-size: var(--h5);
+}
+
+blockquote {
+  border: 1px solid var(--white);
+  border-radius:15px;
+  background: var(--white);
+  width: 40em;
+  margin: 10px;
+  padding: 2em;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
 }
 
 small, .text_small {

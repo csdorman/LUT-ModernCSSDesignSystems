@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ModCSSDesignSystems.iml" filepath="$PROJECT_DIR$/.idea/ModCSSDesignSystems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LUT-ModCSSDesignSystems.iml" filepath="$PROJECT_DIR$/.idea/LUT-ModCSSDesignSystems.iml" />
     </modules>
   </component>
 </project>
