@@ -12,8 +12,11 @@
   --lightGrey: hsla(210, 18%, 92%, 1);
 
   /* Define color intentions */
+  --primary: var(--darkBlue);
+  --danger: var(--red);
   --background: var(--lightGrey);
-  --text-color: var(--black);
+  --textColor: var(--black);
+  --lightText: var(--lightGrey);
   --lineColor: var(--grey);
 
 
@@ -105,7 +108,7 @@ small, .text_small {
 
 body {
   background: var(--background);
-  color: var(--text-color);
+  color: var(--textColor);
 }
 
 label {
@@ -140,6 +143,40 @@ select {
 
 hr {
   border-top: var(--line);
+}
+
+button {
+  --buttonColor: var(--primary);
+  --buttonPadding: 5px 25px;
+  --buttonShadow: 0 1px 2px hsla(0, 0%, 0%, 0.7);
+  --buttonMargin: 5px;
+  appearance: none;
+  color: var(--lightText);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: var(--buttonPadding);
+  box-shadow: var(--buttonShadow);
+  margin: var(--buttonMargin);
+}
+
+button[disabled] {
+  opacity: 0.2;
+  color: var(--grey);
+}
+
+button:hover {
+
+}
+
+button.cancel {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+button.small {
+  font-size: var(--smallText);
+  padding: 5px 10px;
 }
 
 .dark {
