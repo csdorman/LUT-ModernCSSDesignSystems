@@ -27,6 +27,7 @@
   /* Typography */
   --heading-font: 'JetBrains Mono', monospace;
   --body-font: 'IBM Plex Sans', sans-serif;
+  --baseFontSize: 112.5%; /* 18px */
   --h1: 2.488rem;
   --h2: 2.074rem;
   --h3: 1.728rem;
@@ -43,10 +44,8 @@
 }
 
 
-/* From Type-scale.com */
-
-
-html {font-size: 112.5%;} /*18px*/
+/* Sizing from Type-scale.com */
+html {font-size: var(--baseFontSize)}
 
 body {
   font-family: var(--body-font);
@@ -54,6 +53,8 @@ body {
   line-height: 1.75;
   margin-left: 20px;
   padding-bottom: 150px;
+  background: var(--background);
+  color: var(--textColor);
 }
 
 p {
@@ -115,11 +116,6 @@ small, .text_small {
 }
 
 /* End Type-scale import */
-
-body {
-  background: var(--background);
-  color: var(--textColor);
-}
 
 label {
   display: block;
@@ -199,7 +195,7 @@ button.small {
 
 .grid {
   --gridCols: 2;
-  display: grid;
+  display: block;
   grid-template-columns: repeat(var(--gridCols), 1fr);
 }
 
@@ -215,7 +211,7 @@ button.small {
 
 .flex {
   --justifyContent: space-between;
-  display: flex;
+  display: block;
   justify-content: var(--justifyContent);
 }
 
@@ -229,4 +225,17 @@ button.small {
   --text-color: var(--lightGrey);
 }
 
-
+/* Responsive Layout */
+/* Located below .grid and .flex for specificity */
+@media only screen and (min-width: 500px) {
+  /* Below 500px gets phone sizing */
+  :root {
+    --baseFontSize: 100%;
+  }
+  .grid {
+    display: grid;
+  }
+  .flex {
+    display: flex;
+  }
+}
