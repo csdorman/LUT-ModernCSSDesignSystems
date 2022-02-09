@@ -41,20 +41,62 @@
   --level-2: 0 4px 6px  -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -2px hsla(0, 0%, 0%, 0.1);
   --level-3: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -4px hsla(0, 0%, 0%, 0.1);
   --level-4: 0 20px 25px -5px hsla(0, 0%, 0%, 0.1), 0 8px 10px -6px hsla(0, 0%, 0%, 0.1);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
 }
 
 
 /* Sizing from Type-scale.com */
-html {font-size: var(--baseFontSize)}
+html {
+  font-size: var(--baseFontSize);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: var(--body-font);
   font-weight: 400;
   line-height: 1.75;
-  margin-left: 20px;
   padding-bottom: 150px;
   background: var(--background);
   color: var(--textColor);
+}
+
+header {
+  --headerBackground: var(--darkBlue);
+  background-color: var(--headerBackground);
+  box-shadow: var(--level-2);
+  color: var(--white);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 20px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
 }
 
 p {
@@ -189,8 +231,7 @@ button.small {
 }
 
 .layout {
-  margin: 0 auto;
-  width: 95%;
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
 .grid {
@@ -238,4 +279,9 @@ button.small {
   .flex {
     display: flex;
   }
+}
+
+.fake-logo {
+  font-size: var(--baseFontSize);
+  margin: 0;
 }
