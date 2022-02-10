@@ -18,6 +18,7 @@
   --textColor: var(--black);
   --lightText: var(--lightGrey);
   --lineColor: var(--grey);
+  --cardBg: hsla(100, 100%, 100%, 1);
 
 
   /* Styles */
@@ -165,7 +166,7 @@ h5 {
 blockquote {
   border: var(--line);
   border-radius:var(--borderRadius);
-  background: var(--white);
+  background: var(--cardBg);
   max-width: 40em;
   width: 90%;
   margin: 10px;
@@ -308,4 +309,19 @@ button.small {
 .fake-logo {
   font-size: var(--baseFontSize);
   margin: 0;
+}
+
+.card {
+  background-color: var(--cardBg);
+  padding: 1em;
+  box-shadow: var(--level-3);
+  border-radius: var(--borderRadius);
+}
+
+.card > *:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
 }
