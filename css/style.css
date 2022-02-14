@@ -281,6 +281,12 @@ button.small {
   justify-content: var(--justifyContent);
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-gap: 20px;
+}
+
 .flex-around {
   --justifyContent: space-around;
 }
