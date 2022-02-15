@@ -15,10 +15,15 @@
   --primary: var(--darkBlue);
   --danger: var(--red);
   --background: var(--lightGrey);
-  --textColor: var(--black);
+  --textColor: var(--darkBlue);
   --lightText: var(--lightGrey);
   --lineColor: var(--grey);
+  --headerBackground: var(--darkBlue);
   --cardBg: hsla(100, 100%, 100%, 1);
+  --buttonColor: var(--primary);
+  --buttonTextColor: var(--white);
+  --footerBackground: var(--black);
+
 
 
   /* Styles */
@@ -70,7 +75,6 @@ body {
 }
 
 header {
-  --headerBackground: var(--darkBlue);
   background-color: var(--headerBackground);
   box-shadow: var(--level-2);
   color: var(--white);
@@ -88,7 +92,7 @@ header {
 footer {
   --footerTextColor: var(--grey);
   color: var(--footerTextColor);
-  background: var(--black);
+  background: var(--footerBackground);
   padding: 2rem var(--containerPadding);
   text-align: center;
   display: grid;
@@ -131,7 +135,7 @@ p {
 
 p a,
 blockquote a{
-  color: var(--black);
+  color: var(--textColor);
   text-decoration: none;
   border-bottom: solid 2px var(--green);
 }
@@ -221,12 +225,11 @@ hr {
 }
 
 button {
-  --buttonColor: var(--primary);
   --buttonPadding: 5px 25px;
   --buttonShadow: var(--level-1);
   --buttonMargin: 5px;
   appearance: none;
-  color: var(--lightText);
+  color: var(--buttonTextColor);
   background-color: var(--buttonColor);
   border: none;
   border-radius: var(--borderRadius);
@@ -291,12 +294,6 @@ button.small {
   --justifyContent: space-around;
 }
 
-.dark {
-  /* Easy to make a dark mode with this format */
-  --background: var(--black);
-  --text-color: var(--lightGrey);
-}
-
 /* Responsive Layout */
 /* Located below .grid and .flex for specificity */
 @media only screen and (min-width: 500px) {
@@ -331,3 +328,17 @@ button.small {
 .card > *:last-child {
   margin-bottom: 0;
 }
+
+/* Dark Mode */
+/* Making variables global (in the :root element) makes them easier to change. */
+.dark {
+  /* Easy to make a dark mode with this format */
+  --cardBg: var(--darkBlue);
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+  --headerBackground: hsla(0, 0%, 0%, 1);
+  --buttonColor: var(--grey);
+  --buttonTextColor: var(--black);
+  --footerBackground: hsla(0, 0%, 0%, 1);
+}
+
