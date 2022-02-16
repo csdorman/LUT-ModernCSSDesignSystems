@@ -1,56 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400|JetBrains+Mono:400');
 
 :root {
-  /* Define colors */
-  --black: hsla(210, 11%, 15%, 1);
-  --white: hsla(210, 1%, 98%, 1);
-  --green: hsla(171, 100%, 46%, 1);
-  --red: hsla(350, 100%, 66%, 1);
-  --yellow: hsla(51, 98%, 65%, 1);
-  --darkBlue: hsla(214, 100%, 15%, 1);
-  --grey: hsla(0, 0%, 75%, 1);
-  --lightGrey: hsla(210, 18%, 92%, 1);
 
-  /* Define color intentions */
-  --primary: var(--darkBlue);
-  --danger: var(--red);
-  --background: var(--lightGrey);
-  --textColor: var(--darkBlue);
-  --lightText: var(--lightGrey);
-  --lineColor: var(--grey);
-  --headerBackground: var(--darkBlue);
-  --cardBg: hsla(100, 100%, 100%, 1);
-  --buttonColor: var(--primary);
-  --buttonTextColor: var(--white);
-  --footerBackground: var(--black);
-
-
-
-  /* Styles */
-  --line: solid 1px var(--lineColor);
-  --borderRadius: 5px;
-
-  /* Typography */
-  --heading-font: 'JetBrains Mono', monospace;
-  --body-font: 'IBM Plex Sans', sans-serif;
-  --baseFontSize: 112.5%; /* 18px */
-  --h1: 2.488rem;
-  --h2: 2.074rem;
-  --h3: 1.728rem;
-  --h4: 1.44rem;
-  --h5: 1.2rem;
-  --smallText: 0.833rem;
-
-
-  /* Elevation */
-  --level-1: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px -1px hsla(0, 0%, 0%, 0.1);
-  --level-2: 0 4px 6px  -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -2px hsla(0, 0%, 0%, 0.1);
-  --level-3: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -4px hsla(0, 0%, 0%, 0.1);
-  --level-4: 0 20px 25px -5px hsla(0, 0%, 0%, 0.1), 0 8px 10px -6px hsla(0, 0%, 0%, 0.1);
-
-  /* Positioning */
-  --containerPadding: 2.5%;
-  --headerHeight: 3rem;
 }
 
 
@@ -329,16 +280,78 @@ button.small {
   margin-bottom: 0;
 }
 
-/* Dark Mode */
+.theme {
+  /* Define colors */
+  --black: hsla(210, 11%, 15%, 1);
+  --white: hsla(210, 1%, 98%, 1);
+  --green: hsla(171, 100%, 46%, 1);
+  --red: hsla(350, 100%, 66%, 1);
+  --yellow: hsla(51, 98%, 65%, 1);
+  --darkBlue: hsla(214, 100%, 15%, 1);
+  --grey: hsla(0, 0%, 75%, 1);
+  --lightGrey: hsla(210, 18%, 92%, 1);
+  --darkGrey: hsla(345, 13%, 25%, 1);
+
+  /* Define color intentions */
+  --primary: var(--darkBlue);
+  --danger: var(--red);
+  --background: var(--lightGrey);
+  --textColor: var(--darkBlue);
+  --lightText: var(--lightGrey);
+  --lineColor: var(--grey);
+  --headerBackground: var(--darkBlue);
+  --cardBg: hsla(100, 100%, 100%, 1);
+  --buttonColor: var(--primary);
+  --buttonTextColor: var(--white);
+  --footerBackground: var(--black);
+
+  /* Styles */
+  --line: solid 1px var(--lineColor);
+  --borderRadius: 5px;
+
+  /* Typography */
+  --heading-font: 'JetBrains Mono', monospace;
+  --body-font: 'IBM Plex Sans', sans-serif;
+  --baseFontSize: 112.5%; /* 18px */
+  --h1: 2.488rem;
+  --h2: 2.074rem;
+  --h3: 1.728rem;
+  --h4: 1.44rem;
+  --h5: 1.2rem;
+  --smallText: 0.833rem;
+
+  /* Elevation */
+  --level-1: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px -1px hsla(0, 0%, 0%, 0.1);
+  --level-2: 0 4px 6px  -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -2px hsla(0, 0%, 0%, 0.1);
+  --level-3: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -4px hsla(0, 0%, 0%, 0.1);
+  --level-4: 0 20px 25px -5px hsla(0, 0%, 0%, 0.1), 0 8px 10px -6px hsla(0, 0%, 0%, 0.1);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
+}
+
+/* Dark Modes */
 /* Making variables global (in the :root element) makes them easier to change. */
 .dark {
   /* Easy to make a dark mode with this format */
   --cardBg: var(--darkBlue);
   --background: var(--black);
   --textColor: var(--lightGrey);
-  --headerBackground: hsla(0, 0%, 0%, 1);
+  --headerBackground: var(--darkGrey);
   --buttonColor: var(--grey);
-  --buttonTextColor: var(--black);
-  --footerBackground: hsla(0, 0%, 0%, 1);
+  --buttonTextColor: var(--darkBlue);
+  --footerBackground: var(--darkGrey);
+}
+
+.oled {
+  --black: hsla(0, 0%, 0%, 1);
+  --cardBg: var(--darkBlue);
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+  --headerBackground: var(--darkGrey);
+  --buttonColor: var(--grey);
+  --buttonTextColor: var(--darkBlue);
+  --footerBackground: var(--darkGrey);
 }
 
