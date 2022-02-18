@@ -21,9 +21,21 @@
   <link rel="stylesheet" href="css/style.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <script>
+    function loadDark() {
+      console.log(document.querySelector("body"))
+      let body = document.querySelector("body")
+      if (body.classList.contains("dark"))
+        (body.classList.remove("dark"))
+      else {
+        (body.classList.add("dark"))
+      }
+    }
+  </script>
 </head>
 
-<body class="theme oled">
+<body class="theme">
 
 <!--TODO: Create 2-3 theme options-->
 <!--TODO: Create button/toggle to select between themes-->
@@ -37,6 +49,14 @@
     </nav>
   </header>
   <main class="layout">
+    <div class="themebtns">
+      <button id="default" onclick="">
+        Default Theme
+      </button>
+      <button id="dark" onclick="loadDark()">
+        Dark Theme
+      </button>
+    </div>
     <!-- Add your site or application content here -->
     <h1>Hello World</h1>
     <h1>This is an H1</h1>

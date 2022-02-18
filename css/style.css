@@ -4,7 +4,6 @@
 
 }
 
-
 /* Sizing from Type-scale.com */
 html {
   font-size: var(--baseFontSize);
@@ -329,6 +328,29 @@ button.small {
   /* Positioning */
   --containerPadding: 2.5%;
   --headerHeight: 3rem;
+}
+
+.warm {
+  /* Colors */
+  --peach: hsla(42,93%, 95%, 1);
+  --darkBlue: hsla(224,100%, 17%, 1);
+  --palePink: hsla(20,68%, 85%, 1);
+  --white: hsla(42, 93%, 95%, 1);
+  --lightBlue: hsla(187,55% ,71%, 1);
+  --hotPink: hsla(337,85%, 74%, 1);
+
+  /* Intentions */
+  --primary: var(--pink);
+  --danger: var(--red);
+  --background: var(--peach);
+  --textColor: var(--darkBlue);
+  --lightText: var(--hotPink);
+  --lineColor: var(--palePink);
+  --headerBackground: var(--hotPink);
+  --cardBg: hsla(100, 100%, 100%, 1);
+  --buttonColor: var(--darkBlue);
+  --buttonTextColor: var(--white);
+  --footerBackground: var(--black);
 }
 
 /* Dark Modes */
