@@ -23,13 +23,42 @@
   <meta name="theme-color" content="#fafafa">
 
   <script>
-    function loadDark() {
-      console.log(document.querySelector("body"))
+    function loadDefaultTheme() {
       let body = document.querySelector("body")
-      if (body.classList.contains("dark"))
-        (body.classList.remove("dark"))
+      body.className = ""
+      body.classList.add("theme")
+    }
+
+    function loadDark() {
+      let body = document.querySelector("body")
+      if (!body.classList.contains("dark")) {
+        body.className = ""
+        body.classList.add("theme", "dark")
+      }
       else {
-        (body.classList.add("dark"))
+        body.classList.remove("dark")
+      }
+    }
+
+    function loadOled() {
+      let body = document.querySelector("body")
+      if (!body.classList.contains("oled")) {
+        body.className = ""
+        body.classList.add("theme", "oled")
+      }
+    else {
+        body.classList.remove("oled")
+      }
+    }
+
+    function loadWarm() {
+      let body = document.querySelector("body")
+      if (!body.classList.contains("warm")) {
+        body.className = ""
+        body.classList.add("theme", "warm")
+      }
+      else {
+        body.classList.remove("warm")
       }
     }
   </script>
@@ -50,11 +79,17 @@
   </header>
   <main class="layout">
     <div class="themebtns">
-      <button id="default" onclick="">
+      <button id="default" onclick="loadDefaultTheme()">
         Default Theme
       </button>
       <button id="dark" onclick="loadDark()">
         Dark Theme
+      </button>
+      <button id="oled" onclick="loadOled()">
+        Dark (OLED)
+      </button>
+      <button id="warm" onclick="loadWarm()">
+        Warm
       </button>
     </div>
     <!-- Add your site or application content here -->

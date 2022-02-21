@@ -338,19 +338,33 @@ button.small {
   --white: hsla(42, 93%, 95%, 1);
   --lightBlue: hsla(187,55% ,71%, 1);
   --hotPink: hsla(337,85%, 74%, 1);
+  --orange: hsla(32, 80%, 51%, 1);
 
   /* Intentions */
-  --primary: var(--pink);
+  --primary: var(--palePink);
   --danger: var(--red);
   --background: var(--peach);
   --textColor: var(--darkBlue);
   --lightText: var(--hotPink);
   --lineColor: var(--palePink);
-  --headerBackground: var(--hotPink);
+  --headerBackground: var(--orange);
   --cardBg: hsla(100, 100%, 100%, 1);
   --buttonColor: var(--darkBlue);
   --buttonTextColor: var(--white);
   --footerBackground: var(--black);
+}
+
+.pastel {
+  /*Colors*/
+  --purple: hsla(249, 100%, 75%, 1);
+  --bluePurple: hsla(240, 100%, 86%, 1);
+  --white: hsla(248, 100%, 98%, 1);
+  --offWhite: hsla(30, 100%, 93%);
+  --apricot: hsla(24, 100%, 87%, 1);
+  --black: hsla(0, 0%, 30%, 1);
+  --red: hsla(0, 75%, 99%, 1);
+
+  /*Intentions*/
 }
 
 /* Dark Modes */
