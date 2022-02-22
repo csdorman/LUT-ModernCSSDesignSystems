@@ -61,10 +61,22 @@
         body.classList.remove("warm")
       }
     }
+
+    function loadPastel() {
+      let body = document.querySelector("body")
+      if (!body.classList.contains("pastel")) {
+        body.className = ""
+        body.classList.add("theme", "pastel")
+      }
+      else {
+        body.classList.remove("pastel")
+      }
+    }
+
   </script>
 </head>
 
-<body class="theme">
+<body class="theme dusty">
 
 <!--TODO: Create 2-3 theme options-->
 <!--TODO: Create button/toggle to select between themes-->
@@ -90,6 +102,8 @@
       </button>
       <button id="warm" onclick="loadWarm()">
         Warm
+      </button><button id="pastel" onclick="loadPastel()">
+        Pastel
       </button>
     </div>
     <!-- Add your site or application content here -->

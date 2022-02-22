@@ -87,12 +87,12 @@ p a,
 blockquote a{
   color: var(--textColor);
   text-decoration: none;
-  border-bottom: solid 2px var(--green);
+  border-bottom: solid 2px var(--linkUnderline);
 }
 
 p a:hover,
 blockquote a:hover {
-  border-bottom: solid 3px var(--green);
+  border-bottom: solid 3px var(--linkUnderline);
 }
 
 h1, h2, h3, h4, h5 {
@@ -195,7 +195,7 @@ button[disabled] {
 }
 
 button:hover {
-  box-shadow: var(--level-2);
+  box-shadow: var(--level-3);
 }
 
 button.cancel {
@@ -206,6 +206,12 @@ button.cancel {
 button.small {
   font-size: var(--smallText);
   padding: 5px 10px;
+}
+
+.themebtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-around;
 }
 
 .layout {
@@ -303,6 +309,7 @@ button.small {
   --buttonColor: var(--primary);
   --buttonTextColor: var(--white);
   --footerBackground: var(--black);
+  --linkUnderline: var(--green);
 
   /* Styles */
   --line: solid 1px var(--lineColor);
@@ -352,6 +359,7 @@ button.small {
   --buttonColor: var(--darkBlue);
   --buttonTextColor: var(--white);
   --footerBackground: var(--black);
+  --linkUnderline: var(--orange);
 }
 
 .pastel {
@@ -365,6 +373,34 @@ button.small {
   --red: hsla(0, 75%, 99%, 1);
 
   /*Intentions*/
+  --primary: var(--bluePurple);
+  --background: var(--white);
+  --headerBackground: var(--purple);
+  --footerBackground: var(--black);
+  --danger: var(--red);
+  --lightText: var(--apricot);
+  --buttonColor: var(--bluePurple);
+  --buttonTextColor: var(--black);
+  --lineColor: var(--apricot);
+  --linkUnderline: var(--bluePurple);
+}
+
+.dusty {
+  /*Colors*/
+  --warmGrey: hsla(69, 12%, 44%, 1);
+  --artichoke: hsla(60, 14%,  54%, 1);
+  --khaki: hsla(35, 37%, 73%);
+  --beige: hsla(23, 48%, 72%, 1);
+  --banana: hsla(43, 73%, 80%, 1);
+  --honey: hsla(39, 100%, 71%, 1);
+  --sand: hsla(33, 74%, 65%, 1);
+  --sepia: hsla(24, 54%, 82%, 1);
+  --walnut: hsla(24, 36%, 55%, 1);
+  --lightUmber: hsla(25, 20%, 50%, 1);
+
+  /*Intentions*/
+
+
 }
 
 /* Dark Modes */
@@ -378,6 +414,7 @@ button.small {
   --buttonColor: var(--grey);
   --buttonTextColor: var(--darkBlue);
   --footerBackground: var(--darkGrey);
+  --linkUnderline: var(--lightGrey);
 }
 
 .oled {
@@ -389,5 +426,6 @@ button.small {
   --buttonColor: var(--grey);
   --buttonTextColor: var(--darkBlue);
   --footerBackground: var(--darkGrey);
+  --linkUnderline: var(--lightGrey);
 }
 
