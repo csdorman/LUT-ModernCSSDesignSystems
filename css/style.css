@@ -342,24 +342,35 @@ button.small {
   --peach: hsla(42,93%, 95%, 1);
   --darkBlue: hsla(224,100%, 17%, 1);
   --palePink: hsla(20,68%, 85%, 1);
-  --white: hsla(42, 93%, 95%, 1);
+  --white: hsla(0, 98%, 98%, 1);
   --lightBlue: hsla(187,55% ,71%, 1);
   --hotPink: hsla(337,85%, 74%, 1);
-  --orange: hsla(32, 80%, 51%, 1);
+  --orange: hsla(46, 91%, 49%, 1);
+  --yellow: hsla(56, 93%, 50%, 1);
+  --darkRed: hsla(0, 100%, 22%, 1);
 
   /* Intentions */
   --primary: var(--palePink);
   --danger: var(--red);
   --background: var(--peach);
-  --textColor: var(--darkBlue);
+  --textColor: var(--darkRed);
   --lightText: var(--hotPink);
   --lineColor: var(--palePink);
   --headerBackground: var(--orange);
   --cardBg: hsla(100, 100%, 100%, 1);
-  --buttonColor: var(--darkBlue);
-  --buttonTextColor: var(--white);
+  --buttonColor: var(--yellow);
+  --buttonTextColor: var(--darkRed);
   --footerBackground: var(--black);
   --linkUnderline: var(--orange);
+}
+
+.warm button[disabled] {
+  opacity: 0.2;
+  color: var(--darkRed);
+}
+
+.warm textarea, .warm input {
+  background-color: var(--white);
 }
 
 .pastel {
@@ -370,7 +381,7 @@ button.small {
   --offWhite: hsla(30, 100%, 93%);
   --apricot: hsla(24, 100%, 87%, 1);
   --black: hsla(0, 0%, 30%, 1);
-  --red: hsla(0, 75%, 99%, 1);
+  --red: hsla(0, 75%, 50%, 1);
 
   /*Intentions*/
   --primary: var(--bluePurple);
@@ -378,6 +389,7 @@ button.small {
   --headerBackground: var(--purple);
   --footerBackground: var(--black);
   --danger: var(--red);
+  --textColor: var(--purple);
   --lightText: var(--apricot);
   --buttonColor: var(--bluePurple);
   --buttonTextColor: var(--black);
@@ -397,10 +409,19 @@ button.small {
   --sepia: hsla(24, 54%, 82%, 1);
   --walnut: hsla(24, 36%, 55%, 1);
   --lightUmber: hsla(25, 20%, 50%, 1);
+  --red: hsla(0, 75%, 45%, 1);
 
   /*Intentions*/
-
-
+  --primary: var(--khaki);
+  --background: var(--sepia);
+  --headerBackground: var(--lightUmber);
+  --textColor: var(--warmGrey);
+  --lightText: var(--warmGrey);
+  --lineColor: var(--walnut);
+  --buttonColor: var(--warmGrey);
+  --buttonTextColor: var(--banana);
+  --linkUnderline: var(--khaki);
+  --danger: var(--red);
 }
 
 /* Dark Modes */
@@ -410,11 +431,17 @@ button.small {
   --cardBg: var(--darkBlue);
   --background: var(--black);
   --textColor: var(--lightGrey);
+  --lightText: var(--lightGrey);
   --headerBackground: var(--darkGrey);
   --buttonColor: var(--grey);
   --buttonTextColor: var(--darkBlue);
   --footerBackground: var(--darkGrey);
-  --linkUnderline: var(--lightGrey);
+  --linkUnderline: var(--grey);
+}
+
+.dark button[disabled] {
+  opacity: 0.2;
+  color: var(--white);
 }
 
 .oled {
@@ -426,6 +453,11 @@ button.small {
   --buttonColor: var(--grey);
   --buttonTextColor: var(--darkBlue);
   --footerBackground: var(--darkGrey);
-  --linkUnderline: var(--lightGrey);
+  --linkUnderline: var(--grey);
+}
+
+.oled button[disabled] {
+  opacity: 0.2;
+  color: var(--white);
 }
 

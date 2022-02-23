@@ -73,10 +73,20 @@
       }
     }
 
+    function loadDusty() {
+      let body = document.querySelector("body")
+      if (!body.classList.contains("dusty")) {
+        body.className = ""
+        body.classList.add("theme", "dusty")
+      }
+      else {
+        body.classList.remove("dusty")
+      }
+    }
   </script>
 </head>
 
-<body class="theme dusty">
+<body class="theme">
 
 <!--TODO: Create 2-3 theme options-->
 <!--TODO: Create button/toggle to select between themes-->
@@ -102,8 +112,12 @@
       </button>
       <button id="warm" onclick="loadWarm()">
         Warm
-      </button><button id="pastel" onclick="loadPastel()">
+      </button>
+      <button id="pastel" onclick="loadPastel()">
         Pastel
+      </button>
+      <button id="dusty" onclick="loadDusty()">
+        Dusty
       </button>
     </div>
     <!-- Add your site or application content here -->
